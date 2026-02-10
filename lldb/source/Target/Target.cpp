@@ -3699,7 +3699,7 @@ Status Target::Attach(ProcessAttachInfo &attach_info, Stream *stream) {
     } else {
       // We are stopping all the way out to the user, so update selected frames.
       state = process_sp->WaitForProcessToStop(
-          std::nullopt, nullptr, false, attach_info.GetHijackListener(), stream,
+          std::nullopt, nullptr, true, attach_info.GetHijackListener(), stream,
           true, SelectMostRelevantFrame);
       process_sp->RestoreProcessEvents();
 

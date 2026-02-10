@@ -3321,7 +3321,7 @@ protected:
   bool SetPrivateRunLockToRunning() {
     assert(m_current_private_state_thread);
     if (m_current_private_state_thread)
-      return m_current_private_state_thread->SetPrivateRunLockToStopped();
+      return m_current_private_state_thread->SetPrivateRunLockToRunning();
     return false;
   }
   bool SetPublicRunLockToStopped() {
